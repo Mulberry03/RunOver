@@ -9,7 +9,7 @@ namespace Scenes.Debug.Sample
         public CharacterController controller;
         public float speed = 8f;
         public float bonus = 0.5f;
-        public float speedBonus = 0f;
+        
         public float gravity = -9.81f;
         public float jumpForce = 3f;
 
@@ -30,7 +30,7 @@ namespace Scenes.Debug.Sample
             float magnitude = Mathf.Sqrt(x * x + z * z);
             if (magnitude > controller.minMoveDistance)
             {
-                float totalSpeed = speed + speedBonus;
+                float totalSpeed = speed;
                 _velocity.x = (x / magnitude) * totalSpeed;
                 _velocity.z = (z / magnitude) * totalSpeed;
             }
@@ -45,7 +45,7 @@ namespace Scenes.Debug.Sample
                 if (Input.GetButtonDown("Jump"))
                 {
                     _velocity.y = jumpForce;
-                    speedBonus += bonus;
+                    
                 }
                 else
                     _velocity.y = -minGravMove;
