@@ -6,10 +6,13 @@ public class Controll : MonoBehaviour
 {
     private CharacterController characterController;
     private Animator animator;
+    private Vector3 movimiento = Vector3.zero;
 
     public new Transform camera; 
     public float speed = 4;
     public float gravity = -9.8f;
+    public float velocidad_salto=8.0f;
+    
     
     
     void Start()
@@ -48,6 +51,9 @@ public class Controll : MonoBehaviour
         movement.y += gravity * Time.deltaTime;
         characterController.Move(movement);
         animator.SetFloat("Mag", movementSpeed);
+
+        
     }
+
 }
 
