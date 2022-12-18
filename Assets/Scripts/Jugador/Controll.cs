@@ -11,7 +11,6 @@ public class Controll : MonoBehaviour
     public new Transform camera; 
     public float speed = 4;
     public float gravity = -9.8f;
-    public float velocidad_salto=8.0f;
     
     
     
