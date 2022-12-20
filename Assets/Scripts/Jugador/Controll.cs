@@ -10,7 +10,9 @@ public class Controll : MonoBehaviour
 
     public new Transform camera; 
     public float speed = 4;
-    public float gravity = -9.8f;
+    public float gravity = 9.8f;
+    public float fallVelocity;
+    public float jumpForce;
     
     
     
@@ -22,6 +24,9 @@ public class Controll : MonoBehaviour
 
     void Update()
     {
+        SetGravity();
+        PlayerSkills();
+
         float hor = Input.GetAxis("Horizontal");
         float ver = Input.GetAxis("Vertical");
         Vector3 movement = Vector3.zero;
@@ -52,6 +57,30 @@ public class Controll : MonoBehaviour
         animator.SetFloat("Mag", movementSpeed);
 
         
+    }
+
+    public void PlayerSkills()
+    {
+        if(characterController.isGrounded && Input.GetButtonDown("Jump"))
+        {
+            fallVelocity = jumpForce;
+            movimiento.y = fallVelocity;
+        }
+    }
+
+    public void SetGravity()
+    {
+        
+        if(characterController.isGrounded)
+        {
+            fallVelocity = -gravity * Time.deltaTime;
+            movimiento.y = fallVelocity;
+        }
+        else
+        {
+            fallVelocity -= gravity * Time.deltaTime;
+            movimiento.y = fallVelocity;
+        }
     }
 
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.1470247, g: 0.36394262, b: 0.5799059, a: 1}
+  m_IndirectSpecularColor: {r: 0.14703594, g: 0.36398482, b: 0.57992315, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1189,8 +1189,8 @@ GameObject:
   - component: {fileID: 203124187}
   - component: {fileID: 203124191}
   - component: {fileID: 203124192}
-  - component: {fileID: 203124193}
   - component: {fileID: 203124194}
+  - component: {fileID: 203124195}
   m_Layer: 0
   m_Name: Hiena
   m_TagString: Player
@@ -1295,21 +1295,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: -0.5, z: 0}
---- !u!114 &203124193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 203124185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f46f5077749f71c4fbbcb895dc056d4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 330585546}
-  speed: 11
-  gravity: -9.8
 --- !u!114 &203124194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1325,6 +1310,26 @@ MonoBehaviour:
   salud: 100
   saludMax: 100
   barraSalud: {fileID: 1150005575}
+--- !u!114 &203124195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203124185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b3a4e88b88f7af44a1f67f79fc4d27a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalMove: 0
+  verticalMove: 0
+  player: {fileID: 203124192}
+  gravity: 9.8
+  fallVelocity: 0
+  jump: 4
+  playerSpeed: 6
+  cam: {fileID: 330585545}
 --- !u!1 &234399964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,6 +1396,7 @@ Transform:
   - {fileID: 115060364}
   - {fileID: 195884881}
   - {fileID: 1721194541}
+  - {fileID: 395136663}
   - {fileID: 1624077278}
   - {fileID: 1532854273}
   - {fileID: 894586520}
@@ -1400,11 +1406,10 @@ Transform:
   - {fileID: 1931475153}
   - {fileID: 969555662}
   - {fileID: 155896648}
-  - {fileID: 395136663}
   - {fileID: 2069034993}
   - {fileID: 66132809}
-  - {fileID: 319201036}
   - {fileID: 2056573957}
+  - {fileID: 319201036}
   - {fileID: 1854051764}
   - {fileID: 183800754}
   - {fileID: 1696790789}
@@ -3253,7 +3258,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f3486de26d8a82949a7209a2bfca8dff,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.14
+      value: -1.302
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f3486de26d8a82949a7209a2bfca8dff,
         type: 3}
