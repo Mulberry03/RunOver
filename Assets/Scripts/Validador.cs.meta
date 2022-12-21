@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f29cfdd0e2ad17b4eb3ab6581ce081e3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - textoFlotantePrefab: {fileID: 4113574895860838270, guid: aac729ce41e61c346816005e01a4996a,
+      type: 3}
+  - CajaNombre: {instanceID: 0}
+  - CajaEdad: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
